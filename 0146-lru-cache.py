@@ -52,7 +52,7 @@ class LRUCache:
     
     def _appendleft(self, node: Node):
         """
-        Also sets the key in the cache
+        Also sets the key in the cache to the node
         """
         p, n = self.head, self.head.next
         p.next, n.prev = node, node
@@ -94,7 +94,6 @@ class LRUCache:
 
         node = Node(key, value)
         self._appendleft(node)
-        self.cache[key] = node
         
         if len(self.cache) > self.capacity:
             self._remove(self.tail.prev.key)
