@@ -10,7 +10,7 @@ class Solution:
         # Your implementation here
         dp = [1 if i == target else None for i in range(target + 1)]
         def f(x: int) -> int:
-            if x < 0:
+            if x > target:
                 return 0
             if dp[x] is None:
                 res = 0
