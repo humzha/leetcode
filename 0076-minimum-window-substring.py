@@ -28,8 +28,8 @@ class Solution:
                     c_to_freq[s[start]] -= 1
                     if c_to_freq[s[start]] == 0:
                         del c_to_freq[s[start]]
-                    start += 1
                     if i - start + 1 < min_len:
                         min_len = i - start + 1
                         res = s[start: i + 1]
+                    start += 1
         return res
