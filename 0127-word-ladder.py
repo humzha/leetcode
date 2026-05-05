@@ -31,6 +31,7 @@ class Solution:
                     nei = ''.join(one_edit_word)
                     if nei in word_list and nei not in visited:
                         q.append((nei, dist + 1))
+                        visited.add(nei)
                 one_edit_word[i] = word[i]
         return 0
 
