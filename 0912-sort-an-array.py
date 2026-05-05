@@ -10,15 +10,15 @@ class Solution:
             res = []
             a_idx = b_idx = 0
             while a_idx < len(a) or b_idx < len(b):
-                a_val = a[a_idx] if a < len(a) else float('inf')
-                b_val = b[b_idx] if b < len(b) else float('inf')
+                a_val = a[a_idx] if a_idx < len(a) else float('inf')
+                b_val = b[b_idx] if b_idx < len(b) else float('inf')
                 if a_val < b_val:
                     res.append(a_val)
                     a_idx += 1
                 else:
                     res.append(b_val)
                     b_idx += 1
-            return -1
+            return res
 
             
         # Your implementation here
