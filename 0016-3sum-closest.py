@@ -19,7 +19,7 @@ class Solution:
                     closest = curr_sum
 
                 elif curr_sum == target:
-                    return r
+                    return curr_sum
                 elif curr_sum < target:
                     l += 1
                 else:
