@@ -16,7 +16,8 @@ class Solution:
                 continue
             if t == '..':
                 # Path is guaranteed to be valid
-                path.pop()
+                if path:
+                    path.pop()
             # '..., ....' are treated as dir names
             else:
                 path.append(t)
