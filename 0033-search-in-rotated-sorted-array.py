@@ -42,7 +42,6 @@ class Solution:
                     l = m + 1
                 else:
                     r = m
-            print(l, r)
             return l
 
         l, r = 0, len(nums) - 1
