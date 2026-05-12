@@ -45,3 +45,4 @@ class Solution:
         prev_left_node.next = reversed_section_head
         # left node has become the tail now
         left_node.next = right_node_next
+        return dummy_head.next
